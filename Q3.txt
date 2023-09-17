@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+    float applePrice = 50.0;
+    float mangoPrice = 35.0;
+    float potatoPrice = 10.0;
+    float tomatoPrice = 15.0;
+    float appleQty = 2.0;
+    float mangoQty = 1.5;
+    float potatoQty = 2.5;
+    float tomatoQty = 1.0;
+    float totalCost = (applePrice * appleQty) + (mangoPrice * mangoQty) + (potatoPrice * potatoQty) + (tomatoPrice * tomatoQty);
+    float amountGiven = 500.0;
+    float change = amountGiven - totalCost;
+    if (change >= 0) {
+        printf("Shopkeeper will return Rs. %.2f to Mr. X\n", change);
+    } else {
+        printf("Mr. X did not give enough money. He owes Rs. %.2f to the shopkeeper\n", -change);
+    }
+    return 0;
+}
